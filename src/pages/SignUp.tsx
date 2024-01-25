@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"
+import Button1 from "../components/Button1.tsx"
+import { Link } from "react-router-dom"
 
 function SignUp() {
     return (
@@ -60,8 +62,8 @@ function SignUp() {
                                     type="text"
                                     id="username"
                                     name="username"
-                                    className="text-zinc-400 text-base leading-7 border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2.5 pl-8 pr-16 py-6 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
-                                    placeholder="Create your username"
+                                    className="text-zinc-400 text-sm leading-7 border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2.5 pl-8 pr-16 py-2 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
+                                    placeholder="Create a username"
                                     required
                                 />
                             </div>
@@ -75,7 +77,7 @@ function SignUp() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="text-zinc-400 text-base leading-7 whitespace-nowrap border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2 pl-8 pr-16 py-6 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
+                                    className="text-zinc-400 text-sm leading-7 whitespace-nowrap border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2 pl-8 pr-16 py-2 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
                                     placeholder="Enter your email"
                                     required
                                 />
@@ -91,18 +93,14 @@ function SignUp() {
                                     type="password"
                                     id="password"
                                     name="password"
-                                    className="text-zinc-400 text-base leading-7 whitespace-nowrap border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2 pl-8 pr-16 py-6 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
+                                    className="text-zinc-400 text-sm leading-7 whitespace-nowrap border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2 pl-8 pr-16 py-2 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
                                     placeholder="Enter your password"
                                     required
                                 />
                             </div>
-                            <button
-                                type="submit"
-                                className="text-white text-base leading-7 whitespace-nowrap items-stretch bg-green-400 justify-center mt-9 px-5 py-1.5 rounded-lg self-start"
-                            >
-                                Sign up
-                            </button>
+                            <Button1 text="Sign Up"/>
                         </form>
+                        <p className="text-zinc-700 text-sm font-normal mt-6">Already a member? Click <Link to={'/log-in'} className="font-bold text-teal-900 underline">here</Link> to LogIn</p>
                     </div>
                 </div>
             </span>

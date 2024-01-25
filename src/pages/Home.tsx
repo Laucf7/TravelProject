@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"
 import CardHome from "../components/CardHome.tsx"
+import { Link } from "react-router-dom"
 
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
           </div>
           <span className="relative bg-green-400 self-center flex items-center justify-between gap-5 mt-28 mb-40 px-3 py-3.5 rounded-xl max-md:my-10">
             <div className="text-white text-base leading-7 my-auto">
-              <button>DISCOVER WITH US</button>
+              <button><Link to={'/discover'}>DISCOVER WITH US</Link></button>
             </div>
             
           </span>
@@ -59,7 +60,7 @@ export default function Home() {
                           Countries
                         </div>
                         <div className="text-teal-900 text-3xl font-bold leading-8 whitespace-nowrap mt-9">
-                          +12 years
+                          12
                         </div>
                         <div className="text-zinc-700 text-base leading-7 whitespace-nowrap mt-3.5">
                           fellow travelers

@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
+
 function Footer() {
 
     return (
-        <span className="bg-teal-900 self-stretch flex w-full justify-between gap-5 mt-10 px-16 py-12 items-start max-md:max-w-full max-md:flex-wrap max-md:my-5 max-md:px-5">
+        <span className="bg-teal-900 self-stretch flex w-full justify-between gap-5 mt-10 px-16 py-12 items-start max-md:max-w-full max-md:flex-wrap max-md:mt-5 max-md:px-5">
         <div className="text-white text-4xl leading-10 grow shrink basis-auto">
-          TravelTogether
+        <Link to={'/'}>TravelTogether</Link>
         </div>
         <img
           loading="lazy"

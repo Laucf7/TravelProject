@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 interface NavbarProps {
     isTextWhite: boolean;
   }
@@ -8,14 +9,14 @@ interface NavbarProps {
     return (
         <span className="relative justify-between items-stretch self-stretch flex w-full gap-5 p-6 max-md:max-w-full max-md:flex-wrap">
             <div className={`text-4xl leading-10 grow shrink basis-auto ${textColorStyle}`}>
-                TravelTogether
+            <Link to={'/'}>TravelTogether</Link>
             </div> 
             <span className="self-center flex items-stretch justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap">
-                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}>Home</div>
-                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}>Discover</div>
-                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}>About Us</div>
-                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}>SignUp</div>
-                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}>LogIn</div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/'}>Home</Link></div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/discover'}>Discover</Link></div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/about-us'}>About Us</Link></div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/sign-up'}>SignUp</Link></div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/log-in'}>LogIn</Link></div>
 
             </span>
             <span className="self-center flex items-stretch gap-2.5 my-auto">

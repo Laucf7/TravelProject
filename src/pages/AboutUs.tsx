@@ -44,15 +44,15 @@ function AboutUs() {
                                 <img
                                     loading="lazy"
                                     srcSet="/img/ny.jpeg"
-                                    className="aspect-[0.77] object-contain object-center w-full overflow-hidden grow max-md:mt-10"
+                                    className="aspect-[0.9] object-contain object-center w-full overflow-hidden grow max-md:mt-10"
                                 />
                             </div>
                         </div>
                     </div>{" "}
-                    <div className="text-zinc-700 text-3xl font-bold leading-8 mt-44 max-md:max-w-full max-md:mt-10">
+                    <div className="text-zinc-700 text-3xl font-bold leading-8 mt-24 max-md:max-w-full max-md:mt-10">
                         Some of our globetrotter writters:
                     </div>{" "}
-                    <div className="justify-between items-stretch flex gap-5 mt-7 py-1 max-md:max-w-full max-md:flex-wrap">
+                    <div className="justify-between items-stretch flex gap-5 mt-7 mb-16 py-1 max-md:max-w-full max-md:flex-wrap">
                         <span className="flex grow basis-[0%] flex-col items-center">
                             <img
                                 loading="lazy"
