@@ -1,8 +1,9 @@
 interface ButtonProps {
     text: string;
+    onClick?: () => void
 }
 
-const CardHome: React.FC<ButtonProps> = ({ text }) => {
+const Button1: React.FC<ButtonProps> = ({ text }) => {
 
 
     return (
@@ -16,4 +17,4 @@ const CardHome: React.FC<ButtonProps> = ({ text }) => {
     )
 }
 
-export default CardHome;
+export default Button1;

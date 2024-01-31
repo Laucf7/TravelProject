@@ -2,9 +2,11 @@ import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"
 import CardHome from "../components/CardHome.tsx"
 import { Link } from "react-router-dom"
+//import { useAuth } from "../context/authContext.tsx"
 
 
 export default function Home() {
+  //const {user} = useAuth();
     return (
         <>
            <span className="bg-white flex flex-col">

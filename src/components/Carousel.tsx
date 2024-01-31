@@ -1,5 +1,3 @@
-//falta introduïr el pluguin( plugins: [require("daisyui")],  )a tailwind.config.js
-
 interface CarouselProps {
     imageSrc1: string;
     imageSrc2: string;
@@ -12,7 +10,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageSrc1, imageSrc2, imageSrc3, im
 
     return (
 
-        <div className="carousel w-full">
+        <div className="carousel max-h-80 mt-6">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={imageSrc1} className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

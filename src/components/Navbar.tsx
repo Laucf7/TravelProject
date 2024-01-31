@@ -7,7 +7,7 @@ interface NavbarProps {
     const textColorStyle = isTextWhite ? "text-white" : "text-black";
   
     return (
-        <span className="relative justify-between items-stretch self-stretch flex w-full gap-5 p-6 max-md:max-w-full max-md:flex-wrap">
+        <span className="relative justify-between items-stretch self-stretch flex w-full gap-5 px-6 py-2 max-md:max-w-full max-md:flex-wrap">
             <div className={`text-4xl leading-10 grow shrink basis-auto ${textColorStyle}`}>
             <Link to={'/'}>TravelTogether</Link>
             </div> 

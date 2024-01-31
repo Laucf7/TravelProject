@@ -8,7 +8,7 @@ function SignUp() {
         <>
             <Navbar isTextWhite={false} />
             <div className="bg-white flex flex-col items-stretch">
-                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden min-h-[250px] w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-12 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
+                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-12 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
                     <img
                         loading="lazy"
                         srcSet="/img/long2.png"
@@ -40,20 +40,6 @@ function SignUp() {
                         </p>
                         <form className="mt-8">
                             <div>
-                                <label htmlFor="username" className="text-zinc-700 text-base leading-7 self-stretch max-md:max-w-full">
-                                    User Name:
-                                </label>{" "}
-                            </div>
-                            <div className="mb-4">
-                                <input
-                                    type="text"
-                                    id="username"
-                                    name="username"
-                                    className="text-zinc-400 text-sm leading-7 border border-[color:var(--TextColor,#A8A7AB)] self-stretch justify-center mt-2.5 pl-8 pr-16 py-2 rounded-xl border-solid items-start max-md:max-w-full max-md:px-5"
-                                    placeholder="Enter your username"
-                                />
-                            </div>
-                            <div>
                                 <label htmlFor="email" className="text-zinc-700 text-base leading-7 self-stretch mt-4 max-md:max-w-full">
                                     Email:
                                 </label>{" "}
@@ -69,7 +55,6 @@ function SignUp() {
                                 />
                             </div>
                             <div>
-
                                 <label htmlFor="password" className="text-zinc-700 text-base leading-7 self-stretch mt-9 max-md:max-w-full">
                                     Password:
                                 </label>{" "}

@@ -6,7 +6,7 @@ function AboutUs() {
         <>
             <Navbar isTextWhite={false} />
             <div className="bg-white flex flex-col items-stretch">
-                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden min-h-[250px] w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-14 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
+                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-14 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
                     <img
                         loading="lazy"
                         srcSet="/img/long.jpg"
@@ -16,15 +16,15 @@ function AboutUs() {
                         About Us
                     </p>
                 </div>
-                <span className="flex w-full flex-col items-stretch mt-16 px-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+                <span className="flex w-full flex-col items-stretch px-12 max-md:max-w-full max-md:mt-2 max-md:px-5">
                     <div className="max-md:max-w-full">
-                        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                            <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0">
-                                <span className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
+                        <div className="flex justify-center gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0">
+                            <div className="flex flex-col items-stretch w-[50%] max-md:w-full max-md:ml-0">
+                                <span className="flex flex-col items-stretch mt-12 max-md:max-w-full max-md:mt-10">
                                     <div className="text-zinc-700 text-3xl font-bold leading-8 max-md:max-w-full">
                                         What is TravelTogether?
                                     </div>
-                                    <div className="text-black text-base leading-7 mt-14 max-md:max-w-full max-md:mt-10">
+                                    <div className="text-black text-base leading-7 mt-8 max-md:max-w-full max-md:mt-10">
                                         <p className="mb-4">Welcome to our platform, a dedicated space for travel
                                             enthusiasts seeking inspiration and practical insights for
                                             their next adventure! Here, you can explore the journeys of
@@ -40,7 +40,7 @@ function AboutUs() {
                                     </div>
                                 </span>
                             </div>{" "}
-                            <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[28%] mt-16 max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
                                     srcSet="/img/ny.jpeg"
@@ -60,7 +60,7 @@ function AboutUs() {
                                 className="aspect-[0.81] object-contain object-center w-[200px] overflow-hidden"
                             />{" "}
                             <div className="text-black text-xl leading-9 self-stretch mt-5">
-                                Agung perdana
+                                Agung Perdana
                             </div>{" "}
                             <div className="text-zinc-700 text-base leading-7 self-stretch mt-3.5">
                                 Web Designer
@@ -86,7 +86,7 @@ function AboutUs() {
                                 className="aspect-[0.81] object-contain object-center w-[200px] overflow-hidden"
                             />{" "}
                             <div className="text-black text-xl leading-9 self-stretch mt-5">
-                                Rahardianysah
+                                Rahardi Anysah
                             </div>{" "}
                             <div className="text-zinc-700 text-base leading-7 self-stretch whitespace-nowrap mt-3.5">
                                 International Relations
@@ -99,7 +99,7 @@ function AboutUs() {
                                 className="aspect-[0.81] object-contain object-center w-[200px] overflow-hidden"
                             />{" "}
                             <div className="text-black text-xl leading-9 self-stretch mt-5">
-                                Andika
+                                Anna Smith
                             </div>{" "}
                             <div className="text-zinc-700 text-base leading-7 self-stretch mt-5">
                                 Medical Check
@@ -112,10 +112,10 @@ function AboutUs() {
                                 className="aspect-[0.81] object-contain object-center w-[200px] overflow-hidden"
                             />{" "}
                             <div className="text-black text-xl leading-9 self-stretch mt-5">
-                                Theresa Russell
+                                James Russell
                             </div>{" "}
                             <div className="text-zinc-700 text-base leading-7 self-stretch mt-5">
-                                Doctor Assistant
+                                Director Assistant
                             </div>
                         </span>
                     </div>

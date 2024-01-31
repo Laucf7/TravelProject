@@ -8,7 +8,7 @@ function Discover() {
         <>
             <Navbar isTextWhite={false} />
             <div className="bg-white flex flex-col items-stretch">
-                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden min-h-[250px] w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-14 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
+                <div className="flex-col text-white text-4xl font-bold leading-10 relative whitespace-nowrap overflow-hidden w-full justify-center mt-2.5 pl-12 pr-16 pt-40 pb-14 items-start max-md:max-w-full max-md:pt-10 max-md:px-5">
                     <img
                         loading="lazy"
                         srcSet="/img/long.jpg"
