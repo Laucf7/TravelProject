@@ -2,32 +2,30 @@ import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"
 import CardHome from "../components/CardHome.tsx"
 import { Link } from "react-router-dom"
-//import { useAuth } from "../context/authContext.tsx"
-
 
 export default function Home() {
-  //const {user} = useAuth();
-    return (
-        <>
-           <span className="bg-white flex flex-col">
+
+  return (
+    <>
+      <span className="bg-white flex flex-col">
         <div className="flex-col overflow-hidden self-stretch relative flex min-h-[720px] w-full max-md:max-w-full max-md:px-5">
           <img
             loading="lazy"
-            srcSet="/img/zanzibar.jpg"
+            srcSet="/img/zanzibar2.jpg"
             className="absolute h-full w-full object-cover object-center inset-0"
           />
           <Navbar isTextWhite={true} />
           <div className="relative text-white text-center text-5xl leading-[57.6px] self-center mt-36 max-md:max-w-full max-md:text-4xl max-md:mt-10">
-            Explore the world with a smile
+            <h1>Explore the world with a smile</h1>
           </div>
           <div className="relative text-white text-center text-base leading-7 self-center mt-5">
             Travel easy joining our community of travellers
           </div>
-          <span className="relative bg-green-400 self-center flex items-center justify-between gap-5 mt-28 mb-40 px-3 py-3.5 rounded-xl max-md:my-10">
+          <span className="relative bg-green-400 self-center flex items-center justify-between gap-5 mt-10 mb-40 px-3 py-3.5 rounded-xl max-md:my-10">
             <div className="text-white text-base leading-7 my-auto">
               <button><Link to={'/discover'}>DISCOVER WITH US</Link></button>
             </div>
-            
+
           </span>
         </div>
         <div className="self-center w-full max-w-[1185px] mt-24 max-md:max-w-full max-md:mt-10">
@@ -99,34 +97,34 @@ export default function Home() {
         </div>
         <div className="self-center w-full max-w-[1180px] mt-14 px-5 max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            
-            <CardHome 
-             title="Top Destinations"
-             imageSrc="/img/aaa.jpeg" />
-            
-            <CardHome 
-             title="Asia"
-             imageSrc="/img/bbb.jpeg" />
-            
-            <CardHome 
-             title="Europe"
-             imageSrc="/img/ccc.jpeg" />
+
+            <CardHome
+              title="Top Destinations"
+              imageSrc="/img/aaa.jpeg" />
+
+            <CardHome
+              title="Asia"
+              imageSrc="/img/bbb.jpeg" />
+
+            <CardHome
+              title="Europe"
+              imageSrc="/img/ccc.jpeg" />
           </div>
         </div>
         <div className="self-center w-full max-w-[1180px] mt-8 px-5 max-md:max-w-full">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            
-            <CardHome 
-             title="Oceania"
-             imageSrc="/img/ddd.jpeg" />
-            
-            <CardHome 
-             title="America"
-             imageSrc="/img/eee.jpeg" />
-            
-            <CardHome 
-             title="Africa"
-             imageSrc="/img/fff.webp" />
+
+            <CardHome
+              title="Oceania"
+              imageSrc="/img/ddd.jpeg" />
+
+            <CardHome
+              title="America"
+              imageSrc="/img/eee.jpeg" />
+
+            <CardHome
+              title="Africa"
+              imageSrc="/img/fff.webp" />
           </div>
         </div>
         <img
@@ -134,8 +132,8 @@ export default function Home() {
           srcSet="/img/mapamundi.jpeg"
           className="aspect-[1.33] object-contain object-center w-[600px] overflow-hidden self-center max-w-full mt-16 max-md:mt-10"
         />
-        </span>
-        <Footer />
+      </span>
+      <Footer />
     </>
-    )
+  )
 }

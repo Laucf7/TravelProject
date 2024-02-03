@@ -2,13 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-import  AuthProvider from './context/authContext'
+import AuthProvider from './context/authContext'
 import Home from './pages/Home.tsx';
 import AboutUs from './pages/AboutUs.tsx';
 import SignUpPage from './pages/SignUp.tsx';
 import LogIn from './pages/LogIn.tsx';
 import Discover from './pages/Discover.tsx';
 import Discover2 from './pages/Discover2.tsx';
+import { NewItinerary } from './pages/NewItinerary.tsx';
+import { ProtectedRoute } from './components/ProtectedRoute.tsx';
 
 
 
@@ -18,25 +20,33 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "discover",
+    path: "/discover",
     element: <Discover />,
   },
   {
-    path: "about-us",
+    path: "/about-us",
     element: <AboutUs />,
   },
   {
-    path: "sign-up",
+    path: "/sign-up",
     element: <SignUpPage />,
   },
   {
-    path: "log-in",
+    path: "/log-in",
     element: <LogIn />,
   },
   {
-    path: "destination",
+    path: "/destination",
     element: <Discover2 />,
   },
+  {
+    path: "/new-itinerary",
+    element:
+      <ProtectedRoute>
+        <NewItinerary />
+      </ProtectedRoute>,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -44,6 +54,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-    
+
   </React.StrictMode>
 )

@@ -33,7 +33,7 @@ export function FormSignUp() {
         setError('');
         try {
             await signup(user.email, user.password);
-            navigate("/discover");
+            navigate("/log-in");
         } catch (error: any) {
             //setError(error.message as string);
             if (error.code === 'auth/invalid-email') {

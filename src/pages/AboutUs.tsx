@@ -49,7 +49,7 @@ function AboutUs() {
                             </div>
                         </div>
                     </div>{" "}
-                    <div className="text-zinc-700 text-3xl font-bold leading-8 mt-24 max-md:max-w-full max-md:mt-10">
+                    <div className="text-zinc-700 text-3xl font-bold leading-8 mt-16 max-md:max-w-full max-md:mt-10">
                         Some of our globetrotter writters:
                     </div>{" "}
                     <div className="justify-between items-stretch flex gap-5 mt-7 mb-16 py-1 max-md:max-w-full max-md:flex-wrap">

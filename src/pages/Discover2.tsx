@@ -4,6 +4,7 @@ import DayItinerary from "../components/DayItinerary.tsx";
 import AddCivitatis from "../components/AddCivitatis.tsx"
 import Carousel from "../components/Carousel.tsx";
 import { useState } from "react";
+import TravelForm from "../components/FormTemplateItinerary.tsx";
 
 
 function Discover2() {
@@ -27,55 +28,34 @@ function Discover2() {
                         Discover
                     </p>
                 </div>
-                {/* <div className="itineraryDetail ml-5">
-                    <DayItinerary
-                        day="Day 1"
-                        date="20 jul,2023"
-                        place="Colombia"
-                        hotel="Hotel Salento"
-                        explore="Places to visit, blablabla.
-                    Ususususususus"
-                    />
-                    <DayItinerary
-                        day="Day 2"
-                        date="21 jul,2023"
-                        place="Colombia"
-                        hotel="Hotel Salento2"
-                        explore="Places to visit, blablabla"
-                    />
-                </div> */}
                 <div className="self-center w-full max-w-[1182px] mt-6 max-md:max-w-full max-md:mt-4">
-                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
-                            <div className="flex flex-col my-auto px-5 max-md:max-w-full max-md:mt-7">
-                                <div className="flex w-[317px] max-w-full justify-between gap-5 self-start items-start">
-                                    <div className=" cursor-pointer" onClick={toggleItinerary}>
-                                    <h2 className="text-black text-7xl font-bold leading-[81.6px] mt-2 max-md:text-4xl">
-                                        COLOMBIA</h2>
-                                    <h3 className="text-black text-xl mt-2 leading-7 w-full cursor-pointer">
-                                        ITINERARIO (+)</h3>
-                                    <p className=" text-gray-400 text-sm ">
-                                        Haz click para desplegar el itinerario</p>
+                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                    <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
+                        <div className="flex flex-col my-auto px-5 max-md:max-w-full max-md:mt-7">
+                            <div>
+                                <h2 className="text-black text-7xl font-bold leading-[81.6px] mt-2 max-md:text-4xl cursor-pointer" onClick={toggleItinerary}>
+                                    COLOMBIA</h2>
+                                <h3 className="text-black text-xl mt-2 leading-7 w-full cursor-pointer" onClick={toggleItinerary}>
+                                    ITINERARIO (+)</h3>
+                                <p className="text-gray-400 text-sm cursor-pointer" onClick={toggleItinerary}>
+                                    Haz click para desplegar el itinerario</p>
+                                {showItinerary && (
+                                    <div className="itineraryDetail">
+                                        <DayItinerary
+                                            day="Day 1"
+                                            place="Bogota"
+                                            hotel="Hotel Bogota"
+                                            explore="Places to visit, blablabla."
+                                        />
+                                        <DayItinerary
+                                            day="Day 2"
+                                            place="Salento"
+                                            hotel="Hotel Salento2"
+                                            explore="Places to visit, blablabla"
+                                        />
                                     </div>
-                                    {showItinerary && (
-                                        <div className="itineraryDetail">
-                                            <DayItinerary
-                                                day="Day 1"
-                                                date="20 jul,2023"
-                                                place="Colombia"
-                                                hotel="Hotel Salento"
-                                                explore="Places to visit, blablabla. Ususususususus"
-                                            />
-                                            <DayItinerary
-                                                day="Day 2"
-                                                date="21 jul,2023"
-                                                place="Colombia"
-                                                hotel="Hotel Salento2"
-                                                explore="Places to visit, blablabla"
-                                            />
-                                        </div>
-                                    )}
-                                </div>
+                                )}
+                            </div>
                                 <div className="text-black text-base leading-7 self-stretch mt-10 max-md:max-w-full">
                                     enim lobortis scelerisque fermentum dui faucibus in ornare quam
                                     viverra orci sagittis eu volutpat odio facilisis mauris sit amet
@@ -91,7 +71,25 @@ function Discover2() {
                                     imageSrc3="/img/salento.webp"
                                     imageSrc4="/img/tayrona.webp"
                                 />
-                                <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
+                                <div>
+                                    <h2 className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">About my trip:</h2>
+                                    <ul className="text-black text-base leading-7 self-stretch mt-6 max-md:max-w-full">
+                                        <li>
+                                            Duration: x days
+                                        </li>
+                                        <li>
+                                            Month:
+                                        </li>
+                                        <li>
+                                            Travel Type:
+                                        </li>
+                                        <li>
+                                            Budget per person (aprox):
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                {/* <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
                                     About the country
                                 </div>
                                 <div className="flex items-center gap-2.5 self-start">
@@ -115,11 +113,8 @@ function Discover2() {
                                         <li>
                                             Visa (Yes/No)
                                         </li>
-                                        <li>
-                                            Security
-                                        </li>
                                     </ul>
-                                </div>
+                                </div> */}
                                 <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                                     Tips and curiosities
                                 </div>
@@ -191,6 +186,7 @@ function Discover2() {
                     </div>
                 </div>
             </div>
+            <TravelForm />
             <Footer />
         </>
 

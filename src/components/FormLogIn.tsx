@@ -2,6 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import Button1 from "./Button1";
+import {auth} from "../firebase.config"
 
 interface User {
     email: string;
@@ -14,7 +15,7 @@ export function FormLogIn() {
         password: "",
     });
 
-    const { signup } = useAuth()
+    const { login } = useAuth()
 
     const navigate = useNavigate();
 
@@ -32,20 +33,30 @@ export function FormLogIn() {
         e.preventDefault();
         setError('');
         try {
-            await signup(user.email, user.password);
-            navigate("/discover");
+            await login(user.email, user.password);
+            const currentUser = auth.currentUser;
+            if(currentUser && currentUser){
+                console.log(user);
+                navigate("/new-itinerary");
+            }
+            
         } catch (error: any) {
-            //setError(error.message as string);
-            if (error.code === 'auth/invalid-email') {
-                setError('Invalid email');
-              }
-              if (error.code === 'auth/email-already-in-use') {
-                  setError('Email already in use');
-              }
-              
-              if (error.code === 'auth/weak-password') {
-                  setError('The password must contain a minimum of 6 characters');
-              }
+            setError(error.message as string);
+            // if (error.code === "auth/user-not-found") {
+            //     setError("User not found");
+            // }
+            // if (error.code === "auth/invalid-credential") {
+            //     setError("Wrong password");
+            // }
+            // if (error.code === "auth/too-many-requests") {
+            //     setError("Too many requests");
+            // }
+            // if (error.code === "auth/invalid-email") {
+            //     setError("Invalid email");
+            // }
+            // if (error.code === "Email not verified. Please verify your email.") {
+            //     setError("Email not verified. Please verify your email.");
+            // }
         }
     };
 
@@ -91,7 +102,7 @@ export function FormLogIn() {
                         onChange={handleChange}
                     />
                 </div>
-                <Button1 text="Log In"/>
+                <Button1 text="Log In" />
 
             </form>
             <p className="text-zinc-700 text-sm font-normal mt-6">Not registered yet? Click <Link to={'/sign-up'} className="font-bold text-teal-900 underline">here</Link> to SignUp</p>
