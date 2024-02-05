@@ -4,7 +4,6 @@ import DayItinerary from "../components/DayItinerary.tsx";
 import AddCivitatis from "../components/AddCivitatis.tsx"
 import Carousel from "../components/Carousel.tsx";
 import { useState } from "react";
-import TravelForm from "../components/FormTemplateItinerary.tsx";
 
 
 function Discover2() {
@@ -29,33 +28,33 @@ function Discover2() {
                     </p>
                 </div>
                 <div className="self-center w-full max-w-[1182px] mt-6 max-md:max-w-full max-md:mt-4">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
-                        <div className="flex flex-col my-auto px-5 max-md:max-w-full max-md:mt-7">
-                            <div>
-                                <h2 className="text-black text-7xl font-bold leading-[81.6px] mt-2 max-md:text-4xl cursor-pointer" onClick={toggleItinerary}>
-                                    COLOMBIA</h2>
-                                <h3 className="text-black text-xl mt-2 leading-7 w-full cursor-pointer" onClick={toggleItinerary}>
-                                    ITINERARIO (+)</h3>
-                                <p className="text-gray-400 text-sm cursor-pointer" onClick={toggleItinerary}>
-                                    Haz click para desplegar el itinerario</p>
-                                {showItinerary && (
-                                    <div className="itineraryDetail">
-                                        <DayItinerary
-                                            day="Day 1"
-                                            place="Bogota"
-                                            hotel="Hotel Bogota"
-                                            explore="Places to visit, blablabla."
-                                        />
-                                        <DayItinerary
-                                            day="Day 2"
-                                            place="Salento"
-                                            hotel="Hotel Salento2"
-                                            explore="Places to visit, blablabla"
-                                        />
-                                    </div>
-                                )}
-                            </div>
+                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                        <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col my-auto px-5 max-md:max-w-full max-md:mt-7">
+                                <div>
+                                    <h2 className="text-black text-7xl font-bold leading-[81.6px] mt-2 max-md:text-4xl cursor-pointer" onClick={toggleItinerary}>
+                                        COLOMBIA</h2>
+                                    <h3 className="text-black text-xl mt-2 leading-7 w-full cursor-pointer" onClick={toggleItinerary}>
+                                        ITINERARIO (+)</h3>
+                                    <p className="text-gray-400 text-sm cursor-pointer" onClick={toggleItinerary}>
+                                        Haz click para desplegar el itinerario</p>
+                                    {showItinerary && (
+                                        <div className="itineraryDetail">
+                                            <DayItinerary
+                                                day="Day 1"
+                                                place="Bogota"
+                                                hotel="Hotel Bogota"
+                                                explore="Places to visit, blablabla."
+                                            />
+                                            <DayItinerary
+                                                day="Day 2"
+                                                place="Salento"
+                                                hotel="Hotel Salento2"
+                                                explore="Places to visit, blablabla"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
                                 <div className="text-black text-base leading-7 self-stretch mt-10 max-md:max-w-full">
                                     enim lobortis scelerisque fermentum dui faucibus in ornare quam
                                     viverra orci sagittis eu volutpat odio facilisis mauris sit amet
@@ -72,7 +71,8 @@ function Discover2() {
                                     imageSrc4="/img/tayrona.webp"
                                 />
                                 <div>
-                                    <h2 className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">About my trip:</h2>
+                                    <h2 className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
+                                        About my trip:</h2>
                                     <ul className="text-black text-base leading-7 self-stretch mt-6 max-md:max-w-full">
                                         <li>
                                             Duration: x days
@@ -88,35 +88,8 @@ function Discover2() {
                                         </li>
                                     </ul>
                                 </div>
-                                
-                                {/* <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
-                                    About the country
-                                </div>
-                                <div className="flex items-center gap-2.5 self-start">
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/17b1d7fe2a6de4134a471e05cd07ebe11958550eb2b676d40d544298fa5e0780?"
-                                        className="aspect-square object-contain object-center w-6 overflow-hidden shrink-0 max-w-full my-auto"
-                                    />
-                                    <div className="text-zinc-700 text-base leading-7 self-stretch grow whitespace-nowrap">
-                                        Colombia
-                                    </div>
-                                </div>
-                                <div className="text-black text-base leading-7 self-stretch mt-6 max-md:max-w-full">
-                                    <ul>
-                                        <li>
-                                            Currenci (Api?)
-                                        </li>
-                                        <li>
-                                            Weather (Api?)
-                                        </li>
-                                        <li>
-                                            Visa (Yes/No)
-                                        </li>
-                                    </ul>
-                                </div> */}
                                 <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-16 max-md:max-w-full max-md:mt-10">
-                                    Tips and curiosities
+                                    Tips & Suggestion
                                 </div>
                                 <div className="text-black text-base leading-7 self-stretch mt-8 max-md:max-w-full">
                                     <ul>
@@ -134,6 +107,21 @@ function Discover2() {
                                 </div>
                                 <div className="text-zinc-700 text-3xl leading-8 capitalize whitespace-nowrap mt-16 self-start max-md:mt-10">
                                     Other information:
+                                </div>
+                                <div className="text-black text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
+                                    enim lobortis scelerisque fermentum dui faucibus in ornare quam
+                                    viverra orci sagittis eu volutpat odio facilisis mauris sit amet
+                                    massa vitae tortor condimentum lacinia quis vel eros donec ac odio
+                                    tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
+                                    viverra vitae congue eu, consequat ac felis donec et odio
+                                    pellentesque diam volutpat commodo sed egestas egestas fringilla
+                                    fau.enim lobortis scelerisque fermentum dui faucibus in ornare
+                                    quam viverra orci sagittis eu volutpat odio facilisis mauris sit
+                                    amet massa vitae tortor condimentum lacinia quis vel eros donec ac
+                                    odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
+                                    viverra vitae congue eu, consequat ac felis donec et odio
+                                    pellentesque diam volutpat commodo sed egestas egestas fringilla
+                                    fau.
                                 </div>
                             </div>
                         </div>
@@ -155,41 +143,14 @@ function Discover2() {
                                 <AddCivitatis />
                                 <AddCivitatis />
                                 <AddCivitatis />
-                                
-
+                                <AddCivitatis />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="self-center w-full max-w-[1182px] mt-5 mb-28 px-5 max-md:max-w-full max-md:mb-10">
-                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
-                            <div className="text-black text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
-                                enim lobortis scelerisque fermentum dui faucibus in ornare quam
-                                viverra orci sagittis eu volutpat odio facilisis mauris sit amet
-                                massa vitae tortor condimentum lacinia quis vel eros donec ac odio
-                                tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
-                                viverra vitae congue eu, consequat ac felis donec et odio
-                                pellentesque diam volutpat commodo sed egestas egestas fringilla
-                                fau.enim lobortis scelerisque fermentum dui faucibus in ornare
-                                quam viverra orci sagittis eu volutpat odio facilisis mauris sit
-                                amet massa vitae tortor condimentum lacinia quis vel eros donec ac
-                                odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
-                                viverra vitae congue eu, consequat ac felis donec et odio
-                                pellentesque diam volutpat commodo sed egestas egestas fringilla
-                                fau.
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                            <AddCivitatis />
                         </div>
                     </div>
                 </div>
             </div>
-            <TravelForm />
             <Footer />
         </>
-
     );
 }
 

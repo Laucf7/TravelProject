@@ -1,21 +1,28 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import Button1 from "./Button1";
 import {auth} from "../firebase.config"
 
-interface User {
+interface CurrentUser {
     email: string;
     password: string;
 }
 
 export function FormLogIn() {
-    const [user, setUser] = useState<User>({
+    const [currentUser, setCurrentUser] = useState<CurrentUser>({
         email: "",
         password: "",
     });
 
-    const { login } = useAuth()
+    const { login, user } = useAuth()
+
+    useEffect(()=>{
+        console.log("USEEEER ha cambiado en context!!!!", user)
+        if(user && user.email) {
+            navigate("/new-itinerary");
+        }
+    },[user]);
 
     const navigate = useNavigate();
 
@@ -23,7 +30,7 @@ export function FormLogIn() {
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setUser(prevUser => ({
+        setCurrentUser(prevUser => ({
             ...prevUser,
             [name]: value
         }));
@@ -33,12 +40,13 @@ export function FormLogIn() {
         e.preventDefault();
         setError('');
         try {
-            await login(user.email, user.password);
-            const currentUser = auth.currentUser;
-            if(currentUser && currentUser){
-                console.log(user);
-                navigate("/new-itinerary");
-            }
+            await login(currentUser.email, currentUser.password);
+            console.log("USER del CONTEXT!!!", user)
+            //const newUser = auth.currentUser; // leer el context bueno
+            //if(currentUser && currentUser){
+            //    console.log(user);
+            //    navigate("/new-itinerary");
+            //}
             
         } catch (error: any) {
             setError(error.message as string);

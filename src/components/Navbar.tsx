@@ -17,6 +17,8 @@ interface NavbarProps {
                 <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/about-us'}>About Us</Link></div>
                 <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/sign-up'}>SignUp</Link></div>
                 <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/log-in'}>LogIn</Link></div>
+                <div className={`text-base leading-7 ${textColorStyle} hover:text-teal-900 hover:font-bold`}><Link to={'/new-itinerary'}>New Itinerary</Link></div>
+
 
             </span>
             <span className="self-center flex items-stretch gap-2.5 my-auto">

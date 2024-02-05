@@ -28,7 +28,7 @@ const TravelForm: React.FC = () => {
         fetchCountries();
     }, []);
 
-    //Para el listado de tips y curiosidades
+    //Para el listado de tips y suggestions
     const [items, setItems] = useState<string[]>([]);
     const [inputValue, setInputValue] = useState<string>('');
 
@@ -67,7 +67,7 @@ const TravelForm: React.FC = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto bg-teal-900 p-8 shadow-2xl rounded-md">
+        <div className="max-w-lg mx-auto bg-teal-900 p-8 shadow-2xl rounded-md mt-6">
             {/* <h1 className="text-3xl font-semibold mb-6 text-white">ENTER YOUR ITINERARY</h1> */}
             <img
                 loading="lazy"
@@ -77,7 +77,7 @@ const TravelForm: React.FC = () => {
             <form>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="country" className='text-lg font-semibold text-white'>Country:</label>
-                    <select id="country" name="country" className='border border-teal-900 ml-2 p-1 rounded-md'>
+                    <select id="country" name="country" className='border border-teal-900  p-1 rounded-md'>
                         <option value="">Select a country</option>
                         {countries.map((country, index) => (
                             <option key={index} value={country}>
@@ -88,11 +88,11 @@ const TravelForm: React.FC = () => {
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="duration" className='text-lg font-semibold text-white'>Duration:</label>
-                    <input type="number" id="duration" name="duration" placeholder="Total days" className='border border-teal-900 ml-2 p-1 rounded-md' />
+                    <input type="number" id="duration" name="duration" placeholder="Total days" className='border border-teal-900  p-1 rounded-md' />
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="month" className='text-lg font-semibold text-white'>Month:</label>
-                    <select id="month" name="month" className='border border-teal-900 ml-2 p-1 rounded-md'>
+                    <select id="month" name="month" className='border border-teal-900  p-1 rounded-md'>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -109,7 +109,7 @@ const TravelForm: React.FC = () => {
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="travelType" className='text-lg font-semibold text-white'>Travel Type:</label>
-                    <select id="travelType" name="travelType" className='border border-teal-900 ml-2 p-1 rounded-md'>
+                    <select id="travelType" name="travelType" className='border border-teal-900  p-1 rounded-md'>
                         <option value="individual">Solo trip</option>
                         <option value="couple">Couple</option>
                         <option value="friends">Friends</option>
@@ -119,7 +119,7 @@ const TravelForm: React.FC = () => {
                 </div>
                 <div className="mb-6">
                     <label htmlFor="budget" className='text-lg font-semibold text-white'>Budget per person:</label>
-                    <input type="number" id="budget" name="budget" className='border border-teal-900 ml-2 p-1 rounded-md' />
+                    <input type="number" id="budget" name="budget" className='border border-teal-900  p-1 rounded-md' />
                     <select id="currency" name="currency" className='ml-1 rounded-md'>
                         <option value="euro">€</option>
                         <option value="dolar">$</option>
@@ -127,11 +127,11 @@ const TravelForm: React.FC = () => {
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="text" className='text-lg font-semibold text-white'>Introductory text:</label>
-                    <textarea id="text" name="text" maxLength={500} rows={5} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2 ml-2 p-1' />
+                    <textarea id="text" name="text" maxLength={500} rows={5} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2  p-1' />
                 </div>
                 <div className="mb-6 flex flex-col">
-                    <label htmlFor="text" className='text-lg font-semibold text-white'>Tips & Curiosities</label>
-                    <ul className=' ml-2'>
+                    <label htmlFor="text" className='text-lg font-semibold text-white'>Tips & Suggestion</label>
+                    <ul className=' '>
                         {items.map((item, index) => (
                             <li key={index} className='text-white'>
                                 - {item}{' '}
@@ -146,24 +146,25 @@ const TravelForm: React.FC = () => {
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         placeholder="Enter item"
-                        className='border border-teal-900 ml-2 p-1 rounded-md'
+                        className='border border-teal-900  p-1 rounded-md'
                     />
-                    <button type="button" onClick={addItemToList} className='ml-2 text-white'>
+                    <button type="button" onClick={addItemToList} className=' text-white'>
                         Add Item
                     </button>
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="text" className='text-lg font-semibold text-white'>Other information:</label>
-                    <textarea id="text" name="text" rows={7} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2 ml-2 p-1' />
+                    <textarea id="text" name="text" rows={7} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2  p-1' />
                 </div>
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="photos" className='text-lg font-semibold text-white'>Import Photos</label>
                     <input type="file" className="block file-input file-input-bordered file-input-success w-full max-w-xs" />
                 </div>
-                <div className=''>
+                <div>
+                <label htmlFor="text" className='text-lg font-semibold text-white'>JURNEY DETAILS:</label>
                     {days.map((day, index) => (
                         <div key={index} className='text-white flex flex-col'>
-                            <h2 className='text-lg font-semibold text-white'>New Jurney {index + 1}</h2>
+                            <h2 className='text-md font-semibold text-white border border-white p-2 mt-4 mb-2'> New Jurney {index + 1}</h2>
                             <label htmlFor={`day-${index}`}>Day:</label>
                             <input
                                 type="text"
@@ -171,7 +172,7 @@ const TravelForm: React.FC = () => {
                                 id={`day-${index}`}
                                 value={day.day}
                                 onChange={(e) => handleInputChange(index, e)}
-                                className='text-black'
+                                className='border border-teal-900  p-1 rounded-md text-black'
                             />
 
                             <label htmlFor={`arriveTo-${index}`}>Arrive to:</label>
@@ -181,7 +182,8 @@ const TravelForm: React.FC = () => {
                                 id={`arriveTo-${index}`}
                                 value={day.arriveTo}
                                 onChange={(e) => handleInputChange(index, e)}
-                                className='text-black'
+                                className='border border-teal-900  p-1 rounded-md text-black'
+
                             />
 
                             <label htmlFor={`hotel-${index}`}>Hotel:</label>
@@ -191,7 +193,8 @@ const TravelForm: React.FC = () => {
                                 id={`hotel-${index}`}
                                 value={day.hotel}
                                 onChange={(e) => handleInputChange(index, e)}
-                                className='text-black'
+                                className='border border-teal-900  p-1 rounded-md text-black'
+
                             />
 
                             <label htmlFor={`whatToVisit-${index}`}>What to visit:</label>
@@ -201,13 +204,13 @@ const TravelForm: React.FC = () => {
                                 id={`whatToVisit-${index}`}
                                 value={day.whatToVisit}
                                 onChange={(e) => handleInputChange(index, e)}
-                                className='text-black'
+                                className='border border-teal-900  p-1 rounded-md text-black'
+
                             />
 
                             {<button type="button" onClick={() => handleRemoveDay(index)}>Remove Day</button>}
                         </div>
                     ))}
-
                     <button type="button" onClick={handleAddDay} className='text-white mt-2'>+ Add Day</button>
                 </div>
                 <div className='flex justify-end'>

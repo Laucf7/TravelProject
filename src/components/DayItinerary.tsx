@@ -8,7 +8,6 @@ interface DayProps {
 const DayItinerary: React.FC<DayProps> = ({ day, place, hotel, explore, }) => {
 
     return (
-
         <div className="self-center flex w-full max-w-[925px] items-stretch gap-1.5 mt-6 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
             <div className="flex grow basis-[0%] flex-col mt-2 px-5 self-start max-md:max-w-full">
                 <div className="flex text-neutral-700 text-2xl font-semibold self-stretch max-md:max-w-full">

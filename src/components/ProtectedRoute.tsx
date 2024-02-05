@@ -6,6 +6,8 @@ const {user, loading} = useAuth();
 
 if (loading) return <h1>loading</h1>
 if (!user) return <Navigate to="/log-in" />
+// else {return <Navigate to="/new-itinerary" />}
+
 
 return <>{children}</>
 }

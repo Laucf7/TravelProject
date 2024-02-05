@@ -4,7 +4,7 @@ import Footer from "../components/Footer.tsx"
 //import { Link } from "react-router-dom"
 import FormLogIn from "../components/FormLogIn.tsx";
 
-function SignUp() {
+function LogIn() {
     return (
         <>
             <Navbar isTextWhite={false} />
@@ -43,4 +43,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default LogIn;
