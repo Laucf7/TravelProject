@@ -112,12 +112,6 @@ const TravelForm: React.FC = () => {
                         style={{ width: '64px', height: '64px' }}
                     />
                 </div>
-
-                {/* <img
-                    loading="lazy"
-                    srcSet="/img/greenPlanet3.png"
-                    className="mb-8"
-                /> */}
                 <form onSubmit={handleSubmit((data) => {
                     console.log(data)
                 })}>
@@ -208,72 +202,72 @@ const TravelForm: React.FC = () => {
                             Add Item
                         </button>
                     </div>
-                    
-                <div className="mb-6 flex flex-col">
-                    <label htmlFor="text" className='text-lg font-semibold text-white'>Other information:</label>
-                    <textarea {...register("otherInformation")} id="otherInformation" name="otherInformation" rows={7} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2  p-1' />
-                </div>
-                {/* 
+
+                    <div className="mb-6 flex flex-col">
+                        <label htmlFor="text" className='text-lg font-semibold text-white'>Other information:</label>
+                        <textarea {...register("otherInformation")} id="otherInformation" name="otherInformation" rows={7} className='block w-full px-3 py-2 border border-teal-900 rounded-md mt-2  p-1' />
+                    </div>
+                    {/* 
                 <div className="mb-6 flex flex-col">
                     <label htmlFor="photos" className='text-lg font-semibold text-white'>Import Photos</label>
                     <input type="file" className="block file-input file-input-bordered file-input-success w-full max-w-xs" />
                 </div>
                 */}
-                {/* INICIO DIAS */}
-                <div>
-                <label htmlFor="text" className='text-lg font-semibold text-white'>JURNEY DETAILS:</label>
-                    {days.map((day, index) => (
-                        <div key={index} className='text-white flex flex-col'>
-                            <h2 className='text-md font-semibold text-white border border-white p-2 mt-4 mb-2'> New Jurney {index + 1}</h2>
-                            <label htmlFor={`day-${index}`}>Day:</label>
-                            <input
-                                type="text"
-                                name="day"
-                                id={`day-${index}`}
-                                value={day.day}
-                                onChange={(e) => handleInputChange(index, e)}
-                                className='border border-teal-900  p-1 rounded-md text-black'
-                            />
+                    {/* INICIO DIAS */}
+                    <div>
+                        <label htmlFor="text" className='text-lg font-semibold text-white'>JURNEY DETAILS:</label>
+                        {days.map((day, index) => (
+                            <div key={index} className='text-white flex flex-col'>
+                                <h2 className='text-md font-semibold text-white border border-white p-2 mt-4 mb-2'> New Jurney {index + 1}</h2>
+                                <label htmlFor={`day-${index}`}>Day:</label>
+                                <input
+                                    type="text"
+                                    name="day"
+                                    id={`day-${index}`}
+                                    value={day.day}
+                                    onChange={(e) => handleInputChange(index, e)}
+                                    className='border border-teal-900  p-1 rounded-md text-black'
+                                />
 
-                            <label htmlFor={`arriveTo-${index}`}>Arrive to:</label>
-                            <input
-                                type="text"
-                                name="arriveTo"
-                                id={`arriveTo-${index}`}
-                                value={day.arriveTo}
-                                onChange={(e) => handleInputChange(index, e)}
-                                className='border border-teal-900  p-1 rounded-md text-black'
+                                <label htmlFor={`arriveTo-${index}`}>Arrive to:</label>
+                                <input
+                                    type="text"
+                                    name="arriveTo"
+                                    id={`arriveTo-${index}`}
+                                    value={day.arriveTo}
+                                    onChange={(e) => handleInputChange(index, e)}
+                                    className='border border-teal-900  p-1 rounded-md text-black'
 
-                            />
+                                />
 
-                            <label htmlFor={`hotel-${index}`}>Hotel:</label>
-                            <input
-                                type="text"
-                                name="hotel"
-                                id={`hotel-${index}`}
-                                value={day.hotel}
-                                onChange={(e) => handleInputChange(index, e)}
-                                className='border border-teal-900  p-1 rounded-md text-black'
+                                <label htmlFor={`hotel-${index}`}>Hotel:</label>
+                                <input
+                                    type="text"
+                                    name="hotel"
+                                    id={`hotel-${index}`}
+                                    value={day.hotel}
+                                    onChange={(e) => handleInputChange(index, e)}
+                                    className='border border-teal-900  p-1 rounded-md text-black'
 
-                            />
+                                />
 
-                            <label htmlFor={`whatToVisit-${index}`}>What to visit:</label>
-                            <input
-                                type="text"
-                                name="whatToVisit"
-                                id={`whatToVisit-${index}`}
-                                value={day.whatToVisit}
-                                onChange={(e) => handleInputChange(index, e)}
-                                className='border border-teal-900  p-1 rounded-md text-black'
+                                <label htmlFor={`whatToVisit-${index}`}>What to visit:</label>
+                                <input
+                                    type="text"
+                                    name="whatToVisit"
+                                    id={`whatToVisit-${index}`}
+                                    value={day.whatToVisit}
+                                    onChange={(e) => handleInputChange(index, e)}
+                                    className='border border-teal-900  p-1 rounded-md text-black'
 
-                            />
+                                />
 
-                            {<button type="button" onClick={() => handleRemoveDay(index)}>Remove Day</button>}
-                        </div>
-                    ))}
-                    <button type="button" onClick={handleAddDay} className='text-white mt-2'>+ Add Day</button>
-                </div> 
-                {/* FIN DIAS */}
+                                {<button type="button" onClick={() => handleRemoveDay(index)}>Remove Day</button>}
+                            </div>
+                        ))}
+                        <button type="button" onClick={handleAddDay} className='text-white mt-2'>+ Add Day</button>
+                    </div>
+                    {/* FIN DIAS */}
                     <div className='flex justify-end'>
                         <Button1 text="Submit" />
                     </div>
@@ -288,7 +282,7 @@ const TravelForm: React.FC = () => {
                         <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
                             <div className="flex flex-col my-auto px-5 max-md:max-w-full max-md:mt-7">
                                 <div>
-                                    <h2 id="country" className="text-black text-7xl font-bold leading-[81.6px] mt-2 max-md:text-4xl cursor-pointer" onClick={toggleItinerary}>
+                                    <h2 id="country" className="text-black text-7xl font-extrabold leading-[81.6px] mt-2 max-md:text-4xl cursor-pointer" onClick={toggleItinerary}>
                                         {country.toUpperCase()}</h2>
                                     <h3 className="text-black text-xl mt-2 leading-7 w-full cursor-pointer" onClick={toggleItinerary}>
                                         ITINERARIO (+)</h3>
@@ -296,22 +290,19 @@ const TravelForm: React.FC = () => {
                                         Haz click para desplegar el itinerario</p>
                                     {showItinerary && (
                                         <div className="itineraryDetail">
-                                            <DayItinerary
-                                                day="Day 1"
-                                                place="Bogota"
-                                                hotel="Hotel Bogota"
-                                                explore="Places to visit, blablabla."
-                                            />
-                                            <DayItinerary
-                                                day="Day 2"
-                                                place="Salento"
-                                                hotel="Hotel Salento2"
-                                                explore="Places to visit, blablabla"
-                                            />
+                                            {days.map((day, index) => (
+                                                <DayItinerary
+                                                    key={index}
+                                                    day={day.day}
+                                                    place={day.arriveTo}
+                                                    hotel={day.hotel}
+                                                    explore={day.whatToVisit}
+                                                />
+                                            ))}
                                         </div>
                                     )}
                                 </div>
-                                <div className="text-black text-base leading-7 self-stretch mt-10 max-md:max-w-full">
+                                <div className="text-slate-900 text-base leading-7 self-stretch mt-10 max-md:max-w-full">
                                     <p>{introductoryText}</p>
                                 </div>
                                 <Carousel
@@ -337,7 +328,7 @@ const TravelForm: React.FC = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-16 max-md:max-w-full max-md:mt-10">
+                                <div className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                                     Tips & Suggestion
                                 </div>
                                 <div className="text-black text-base leading-7 self-stretch mt-8 max-md:max-w-full">
@@ -349,10 +340,10 @@ const TravelForm: React.FC = () => {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="text-zinc-700 text-3xl leading-8 capitalize whitespace-nowrap mt-16 self-start max-md:mt-10">
+                                <div className="text-teal-900 text-3xl leading-8 capitalize whitespace-nowrap mt-16 self-start max-md:mt-10">
                                     Other information:
                                 </div>
-                                <div className="text-black text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
+                                <div className="text-slate-900 text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
                                     <p>{otherInformation}</p>
                                 </div>
                             </div>

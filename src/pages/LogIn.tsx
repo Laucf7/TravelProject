@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"
-//import Button1 from "../components/Button1.tsx"
-//import { Link } from "react-router-dom"
 import FormLogIn from "../components/FormLogIn.tsx";
 
 function LogIn() {

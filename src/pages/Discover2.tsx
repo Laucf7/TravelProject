@@ -41,28 +41,27 @@ function Discover2() {
                                     {showItinerary && (
                                         <div className="itineraryDetail">
                                             <DayItinerary
-                                                day="Day 1"
+                                                day="Day 1-2"
                                                 place="Bogota"
                                                 hotel="Hotel Bogota"
-                                                explore="Places to visit, blablabla."
+                                                explore="Cerro de Monserrate, Callejón del Embudo, Plaza de Bolívar, Museo Botero, Laguna de Guatavita"
                                             />
                                             <DayItinerary
-                                                day="Day 2"
+                                                day="Day 3-6"
                                                 place="Salento"
                                                 hotel="Hotel Salento2"
-                                                explore="Places to visit, blablabla"
+                                                explore="Valle de Cocora, Fincas Cafeteras, Filandia, Termales Santa Rosa de Cabal"
                                             />
                                         </div>
                                     )}
                                 </div>
-                                <div className="text-black text-base leading-7 self-stretch mt-10 max-md:max-w-full">
-                                    enim lobortis scelerisque fermentum dui faucibus in ornare quam
-                                    viverra orci sagittis eu volutpat odio facilisis mauris sit amet
-                                    massa vitae tortor condimentum lacinia quis vel eros donec ac
-                                    odio tempor orci dapibus ultrices in iaculis nunc sed augue
-                                    lacus, viverra vitae congue eu, consequat ac felis donec et odio
-                                    pellentesque diam volutpat commodo sed egestas egestas fringilla
-                                    fau.
+                                <div className="text-slate-900 text-base leading-7 self-stretch mt-10 max-md:max-w-full">
+                                    <p>
+                                        En tu viaje a Colombia, disfrutarás de atractivas ciudades como Bogotá, Medellín o
+                                        Cali, y de la riqueza natural de la Sierra Nevada de Santa Marta y del Parque Tayrona.
+                                        Sus playas caribeñas son famosas por los mares de siete colores. Es el hogar de culturas
+                                        fascinantes, indígenas y raizales y de la ciudad colonial más hermosa del mundo, Cartagena de Indias.
+                                    </p>
                                 </div>
                                 <Carousel
                                     imageSrc1="/img/cocora.webp"
@@ -75,53 +74,43 @@ function Discover2() {
                                         About my trip:</h2>
                                     <ul className="text-black text-base leading-7 self-stretch mt-6 max-md:max-w-full">
                                         <li>
-                                            Duration: x days
+                                            Duration: 21 days
                                         </li>
                                         <li>
-                                            Month:
+                                            Month: September
                                         </li>
                                         <li>
-                                            Travel Type:
+                                            Travel Type: Friends
                                         </li>
                                         <li>
-                                            Budget per person (aprox):
+                                            Budget per person: 1.400 euros
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="text-zinc-700 text-3xl leading-8 capitalize self-stretch mt-16 max-md:max-w-full max-md:mt-10">
+                                <h2 className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
                                     Tips & Suggestion
-                                </div>
+                                </h2>
                                 <div className="text-black text-base leading-7 self-stretch mt-8 max-md:max-w-full">
                                     <ul>
                                         <li>
-                                            Llocs
+                                            - No siempre funciona la tarjeta de credito ni todos los pueblos tienen ATM, mejor llevar efectivo
                                         </li>
                                         <li>
-                                            Menjar
+                                            - Para recorrer la zona del eje cafetero recomendamos alquilar coche 4x4
                                         </li>
                                         <li>
-                                            Preferencies pagament/canvi divisa
+                                            - En las ciudades es mejor usar Uber, es más seguro y económico
                                         </li>
 
                                     </ul>
                                 </div>
-                                <div className="text-zinc-700 text-3xl leading-8 capitalize whitespace-nowrap mt-16 self-start max-md:mt-10">
+                                <h2 className="text-teal-900 text-3xl leading-8 capitalize self-stretch mt-7 max-md:max-w-full">
                                     Other information:
-                                </div>
-                                <div className="text-black text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
-                                    enim lobortis scelerisque fermentum dui faucibus in ornare quam
-                                    viverra orci sagittis eu volutpat odio facilisis mauris sit amet
-                                    massa vitae tortor condimentum lacinia quis vel eros donec ac odio
-                                    tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
-                                    viverra vitae congue eu, consequat ac felis donec et odio
-                                    pellentesque diam volutpat commodo sed egestas egestas fringilla
-                                    fau.enim lobortis scelerisque fermentum dui faucibus in ornare
-                                    quam viverra orci sagittis eu volutpat odio facilisis mauris sit
-                                    amet massa vitae tortor condimentum lacinia quis vel eros donec ac
-                                    odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus,
-                                    viverra vitae congue eu, consequat ac felis donec et odio
-                                    pellentesque diam volutpat commodo sed egestas egestas fringilla
-                                    fau.
+                                </h2>
+                                <div className="text-slate-900 text-base leading-7 mt-2 max-md:max-w-full max-md:mt-8">
+                                    <p> Pereira será punto de partida para adentrarte en el Valle del Cocora, donde disfrutar de la diversidad de flora y fauna (las palmeras de cera más altas del mundo están aquí). Salento y el Valle de Cocora también te fascinarán y por su puesto las plantaciones de de café sobre las colinas escarpadas típicas de este área, junto a la programada visita de una Hacienda finca de café típica y la magnífica explicación acerca de la preparación del café, la posibilidad de apreciar el trabajo de los recolectores y de conocer su sistema de de producción con la cosecha y el secado al sol harán que de este circuito una posibilidad casi única.
+                                        Bogotá, la capital, cuenta con casco antiguo con una interesante mezcla entre antiguo y moderno, con hermosos edificios antiguos coloniales y palacios, cafés bohemios, galerías de arte y teatros. La ciudad es conocida por su colección de arte de oro precolombino, iglesias coloniales, grandes museos como el Museo del Oro, uno de los mejores de América del Sur.
+                                        </p>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useAuth } from '../context/authContext'
 import { useNavigate, Link } from 'react-router-dom';
 import Button1 from './Button1';
+import '../MyComponents.css'
 
 
 function SignupComponent() {
@@ -26,7 +27,7 @@ function SignupComponent() {
         setError('');
         try {
             await signup(user.email, user.password);
-
+            customAlert("Please check your email to validate your account.")
             navigate('/log-in');
         } catch (error: any) {
             console.log(error)
@@ -44,6 +45,27 @@ function SignupComponent() {
 
         }
 
+    }
+
+    function customAlert(message: string) {
+        const alertContainer = document.createElement('div');
+        alertContainer.className = 'alert-container';
+    
+        const alertMessage = document.createElement('p');
+        alertMessage.className = 'alert-message';
+        alertMessage.textContent = message;
+    
+        const alertButton = document.createElement('button');
+        alertButton.className = 'alert-button';
+        alertButton.textContent = 'OK';
+        alertButton.onclick = () => {
+            document.body.removeChild(alertContainer);
+        };
+    
+        alertContainer.appendChild(alertMessage);
+        alertContainer.appendChild(alertButton);
+    
+        document.body.appendChild(alertContainer);
     }
 
     return (

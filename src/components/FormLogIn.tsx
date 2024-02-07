@@ -75,7 +75,7 @@ function LoginComponent() {
 
         <div className="flex-grow basis-[0%] flex-col items-stretch self-center ">
           <div>
-            <div>
+            {/* <div>
               <label htmlFor="text" className="text-zinc-700 text-base leading-7 self-stretch mt-4 max-md:max-w-full">
                 User Name:
               </label>{" "}
@@ -89,7 +89,7 @@ function LoginComponent() {
                 placeholder="Enter a user name"
                 onChange={handleChange}
               />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="email" className="text-zinc-700 text-base leading-7 self-stretch mt-4 max-md:max-w-full">
                 Email:

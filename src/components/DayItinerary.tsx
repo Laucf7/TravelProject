@@ -20,13 +20,13 @@ const DayItinerary: React.FC<DayProps> = ({ day, place, hotel, explore, }) => {
                 <div className="text-neutral-700 text-base self-stretch mt-4 max-md:max-w-full border-l-2 border-teal-900 ml-3 pl-3">
                     <ul>
                         <li>
-                            Arrive to: {place}
+                        <span className="font-bold">Arrive to:</span> {place}
                         </li>
                         <li>
-                            Hotel: {hotel}
+                        <span className="font-bold">Hotel:</span> {hotel}
                         </li>
                         <li>
-                            What to explore: {explore}
+                        <span className="font-bold"> What to explore:</span> {explore}
                         </li>
                     </ul>
                 </div>
