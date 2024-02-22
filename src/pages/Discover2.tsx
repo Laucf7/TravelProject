@@ -96,7 +96,7 @@ function Discover2() {
                                             - No siempre funciona la tarjeta de credito ni todos los pueblos tienen ATM, mejor llevar efectivo
                                         </li>
                                         <li>
-                                            - Para recorrer la zona del eje cafetero recomendamos alquilar coche 4x4
+                                            - Para recorrer la zona del Eje Cafetero recomendamos alquilar 4x4
                                         </li>
                                         <li>
                                             - En las ciudades es mejor usar Uber, es más seguro y económico
