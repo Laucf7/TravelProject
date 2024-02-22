@@ -340,7 +340,7 @@ export default TravelForm;
 
 
 
-// PRESENTACIO. FUNCIONA PERO TE 2 FALLOS DE TYPESCRIPT
+// PRESENTACIO. FUNCIONA PERO TE 2 FALLOS DE TYPESCRIPT, ES VISUALITZA AMB HOOK-FORM
 // import React, { useState, useEffect } from 'react';
 // import Button1 from './Button1';
 // import { useForm } from 'react-hook-form'
